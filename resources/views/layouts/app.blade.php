@@ -14,9 +14,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased h-full">
-        <div class="min-h-full">
-        <nav x-data="{ open: false }" class="bg-gray-800">
+    <body class="font-sans antialiased flex flex-col min-h-screen">
+{{--        <div class="min-h-full">--}}
+        <nav x-data="{ open: false }" class="bg-slate-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
@@ -26,8 +26,8 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Videos</a>
-                                <a href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                                <a wire:navigate href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Videos</a>
+                                <a wire:navigate href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
                             </div>
                         </div>
                     </div>
@@ -53,22 +53,20 @@
             <div class="md:hidden" id="mobile-menu" x-show="open" style="display: none;">
                 <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Videos</a>
-                    <a href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium">About</a>
+                    <a wire:navigate href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Videos</a>
+                    <a wire:navigate href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium">About</a>
                 </div>
             </div>
         </nav>
 
-        <header class="bg-white shadow-sm">
-            <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-                <h1 class="text-lg font-semibold leading-6 text-gray-900">{{ $title ?? '' }}</h1>
-            </div>
-        </header>
-        <main>
-            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 px-4">
+{{--        <header class="bg-black shadow-sm">--}}
+{{--            <div class="mx-auto max-w-7xl px-4 md:py-4 sm:px-6 lg:px-8">--}}
+{{--                <h1 class="text-sm md:text-lg font-semibold leading-6 text-slate-400">{{ $title ?? '' }}</h1>--}}
+{{--            </div>--}}
+{{--        </header>--}}
+        <main class="flex flex-grow w-full mx-auto max-w-7xl px-0 sm:px-6 lg:px-8">
                 {{ $slot }}
-            </div>
         </main>
-    </div>
+{{--        </div>--}}
     </body>
 </html>

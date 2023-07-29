@@ -11,7 +11,9 @@
         "laravel/folio": "^1.0@beta",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "livewire/livewire": "^3.0@beta",
+        "livewire/volt": "^1.0@beta"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
