@@ -15,7 +15,6 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased flex flex-col min-h-screen">
-{{--        <div class="min-h-full">--}}
         <nav x-data="{ open: false }" class="bg-slate-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
@@ -64,9 +63,9 @@
 {{--                <h1 class="text-sm md:text-lg font-semibold leading-6 text-slate-400">{{ $title ?? '' }}</h1>--}}
 {{--            </div>--}}
 {{--        </header>--}}
+
         <main class="flex flex-grow w-full mx-auto max-w-7xl px-0 sm:px-6 lg:px-8">
-                {{ $slot }}
+            {{ $slot }}
         </main>
-{{--        </div>--}}
     </body>
 </html>
