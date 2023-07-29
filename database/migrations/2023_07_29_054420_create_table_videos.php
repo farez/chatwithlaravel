@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('url');
             $table->string('thumbnail')->nullable();
             $table->text('description')->nullable();
-            $table->string('duration')->nullable();
+            $table->string('source_id')->nullable();
             $table->text('embed_html')->nullable();
         });
     }

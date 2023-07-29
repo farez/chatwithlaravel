@@ -20,7 +20,7 @@ Route::get('/', function () {
     return redirect('/videos');
 });
 
-Route::get('get-vids', function () {
+Route::get('init/xn-839h_qDm', function () {
     $vidIds = [
         '2YaEtaXYVtI',
         '50uRIFaUWqg',
@@ -39,8 +39,30 @@ Route::get('get-vids', function () {
         '1P3wLy49t2c',
     ];
 
-    $vidArray = [];
+    $event = \App\Models\Event::create([
+        'title' => 'Laracon 2023',
+        'start_date' => '2023-07-19',
+        'end_date' => '2023-07-20',
+        'location' => 'Nashville, TN, USA',
+        'slug' => 'laracon-2023',
+        'description' => 'The flagship Laravel event of the year returns for 2023.',
+        'is_published' => true,
+        'videos_processed' => true,
+    ]);
 
+    foreach ($vidIds as $vidId) {
+        $videoData = Youtube::getVideoInfo($vidId);
+        $videoModelData = [
+            'event_id' => $event->id,
+            'title' => $videoData->snippet->title,
+            'url' => 'https://www.youtube.com/watch?v=' . $vidId,
+            'thumbnail' => $videoData->snippet->thumbnails->standard->url,
+            'description' => $videoData->snippet->description,
+            'source_id' => $vidId,
+            'embed_html' => $videoData->player->embedHtml,
+        ];
+        \App\Models\Video::create($videoModelData);
+    }
 });
 
 

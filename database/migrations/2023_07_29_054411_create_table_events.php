@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->date('start_date');
+            $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->string('location');
-            $table->string('slug')->unique();
+            $table->string('location')->nullable();
+            $table->string('slug')->unique()->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->boolean('is_published')->default(false);
