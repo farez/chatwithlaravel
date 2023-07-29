@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Alaouy\Youtube\Facades\Youtube;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,26 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('get-vids', function () {
-    $vidIds = [
-        '2YaEtaXYVtI',
-        '50uRIFaUWqg',
-        '1A1xFtlDyzU',
-        'CrO_7Df1cBc',
-        'KBigS5vLwZk',
-        '23McCP-_9BE',
-        'SSgnN1tMOtU',
-        'CxqtK3k7PVM',
-        'LaKEFjA25r4',
-        'PW-2_-KxF-8',
-        'MMc2TzBY6l4',
-        'iG7VscBFnqo',
-        'AkDMDHAs09U',
-        'U-N8Qqq02b0',
-        '1P3wLy49t2c',
-    ];
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-    foreach ($vidIds as $vidId) {
-        dump(Youtube::getVideoInfo('2YaEtaXYVtI'));
-    }
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+require __DIR__.'/auth.php';
