@@ -1,3 +1,3 @@
 <x-app-layout>
-    CHAT WITH VIDEO {{ $id }}
+    About page
 </x-app-layout>
