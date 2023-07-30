@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-screen">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100 scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,13 +7,17 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased flex flex-col h-full bg-indigo-50 max-h-screen" x-data="{ open: false }">
-<nav class="bg-slate-800 h-[50px]">
+<body class="font-sans antialiased flex flex-col min-h-screen">
+<nav x-data="{ open: false }" class="bg-slate-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-[50px] items-center justify-between">
+        <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="flex-shrink-0">
                     <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
@@ -21,8 +25,8 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Videos</a>
-                        <a href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                        <a wire:navigate href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Videos</a>
+                        <a wire:navigate href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
                     </div>
                 </div>
             </div>
@@ -43,19 +47,25 @@
             </div>
         </div>
     </div>
-</nav>
 
-<main id="main" class="max-w-7xl mx-auto flex-1 flex flex-col md:flex-row relative" style="min-height: calc(100vh - 50px)">
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden z-50 bg-slate-800" id="mobile-menu" x-show="open" style="display: none;">
+    <div class="md:hidden" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-            <a href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Videos</a>
-            <a href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium">About</a>
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a wire:navigate href="/videos" class="@if(Request::is('videos')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Videos</a>
+            <a wire:navigate href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium">About</a>
         </div>
     </div>
+</nav>
 
+{{--        <header class="bg-black shadow-sm">--}}
+{{--            <div class="mx-auto max-w-7xl px-4 md:py-4 sm:px-6 lg:px-8">--}}
+{{--                <h1 class="text-sm md:text-lg font-semibold leading-6 text-slate-400">{{ $title ?? '' }}</h1>--}}
+{{--            </div>--}}
+{{--        </header>--}}
+
+<main class="flex flex-grow w-full mx-auto max-w-7xl px-0 sm:px-6 lg:px-8">
     {{ $slot }}
 </main>
-
 </body>
 </html>

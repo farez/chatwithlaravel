@@ -8,9 +8,8 @@ class Video extends Model
 {
     protected $guarded = [];
 
-    protected static function boot()
+    protected static function booted()
     {
-        parent::boot();
         self::creating(function (Video $video) {
             $video->uuid = \Illuminate\Support\Str::uuid();
         });

@@ -53,6 +53,7 @@
             <a href="/about" class="@if(Request::is('about')) bg-gray-900 text-white @else text-gray-300 hover:bg-gray-700 hover:text-white @endif block rounded-md px-3 py-2 text-base font-medium">About</a>
         </div>
     </div>
+
     <div class="md:w-2/3 p-8">
         <h1 class="text-xl font-bold mb-4">Left Column</h1>
         <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum, eros nec euismod tristique, justo lorem luctus turpis, sit amet suscipit nunc turpis sit amet sapien.</p>

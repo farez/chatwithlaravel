@@ -20,6 +20,10 @@ Route::get('/', function () {
     return redirect('/videos');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('init/xn-839h_qDm', function () {
     $vidIds = [
         '2YaEtaXYVtI',
@@ -64,6 +68,7 @@ Route::get('init/xn-839h_qDm', function () {
         \App\Models\Video::create($videoModelData);
     }
 });
+
 
 
 /*

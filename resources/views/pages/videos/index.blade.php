@@ -10,9 +10,10 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
 
 <x-app-layout>
 
-    <p>Videos from the conference. Click on a video to chat with it.</p>
+    <div>
+        <p>Videos from the conference. Click on a video to chat with it.</p>
 
-    @volt
+        @volt
         <ul class="lg:grid lg:grid-cols-3 lg:gap-4">
             @foreach($this->event->videos as $video)
 
@@ -24,6 +25,7 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
 
             @endforeach
         </ul>
-    @endvolt
+        @endvolt
+    </div>
 
 </x-app-layout>
