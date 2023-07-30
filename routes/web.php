@@ -20,6 +20,9 @@ Route::get('/', function () {
     return redirect('/videos');
 });
 
+Route::get('/videos/{video:uuid}', \App\Livewire\Chat::class)
+    ->name('chat');
+
 Route::get('/test', function () {
     return view('test');
 });
