@@ -10,7 +10,7 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
 
 <x-app-layout>
 
-    <div class="md:p-8">
+    <div class="md:p-8 bg-slate-900">
         <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">Laracon US. Nashville, TN, USA.</h1>
 
         @volt
@@ -19,7 +19,7 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
 
                 <li>
                     <a href="/videos/{{ $video->uuid }}" class="group">
-                        <div class="bg-red-50 md:p-8 p-2 m-2 rounded-lg md:flex lg:mb-16">
+                        <div class="bg-red-50 md:p-8 p-2 m-2 rounded-lg md:flex lg:mb-16 mb-8">
                             <img class="md:w-1/3 h-full shadow-xl" src="{{ $video->thumbnail }}" alt="{{ $video->title }}" />
                             <div class="md:w-2/3 md:ml-8 mt-4 md:mt-0 group">
                                 <div>
