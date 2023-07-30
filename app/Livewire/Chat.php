@@ -9,6 +9,8 @@ class Chat extends Component
 {
     public $video;
 
+    public $question;
+
     public $qas = [];
 
     public function mount(Video $video)
@@ -23,9 +25,15 @@ class Chat extends Component
 
     public function ask()
     {
+        $this->validate([
+            'question' => 'required|string|max:220',
+        ]);
+
         $this->qas[] = [
-            'question' => 'What is the meaning of life?',
-            'answer' => '42',
+            'question' => $this->question,
+            'answer' => 'This is a test answer',
         ];
+
+        $this->question = null;
     }
 }

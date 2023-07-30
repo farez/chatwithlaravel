@@ -36,18 +36,30 @@
         </div>
     </div>
     <div class="md:w-1/3 bg-red-50 px-2 pt-2 pb-16 overflow-y-scroll scroll-smooth">
-
+        @foreach($qas as $qa)
+            <div class="m-4 py-2 text-sm">
+                <div class="question font-medium md:px-4">
+                    {{ $qa['question'] }}
+                </div>
+                <div class="answer font-light md:px-4 py-2">
+                    {{ $qa['answer'] }}
+                </div>
+            </div>
+        @endforeach
     </div>
     <div>
-        <form wire:submit.prevent="ask" class="md:w-1/3 w-full flex absolute bottom-0 right-0 p-2 mx-0 bg-white shadow-lg">
+        <form wire:submit.prevent="ask" class="md:w-1/3 w-full flex flex-col absolute bottom-0 right-0 p-2 mx-0 bg-white shadow-lg">
             <label class="sr-only" for="question">Ask a question</label>
-            <input wire:model="question" maxlength="500" class="flex-1 mr-2 border-0" id="question" type="text" placeholder="Type a question or instruction." />
-            <button type="submit" wire:loading.attr="disabled">
-                <span class="sr-only">Send</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover:mr-0 mr-2 w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                </svg>
-            </button>
+            @error('question') <div class="text-red-500">{{ $message }}</div> @enderror
+            <div class="w-full flex">
+                <input wire:model="question" maxlength="500" class="flex-1 mr-2 border-0" id="question" type="text" placeholder="Type a question or instruction." />
+                <button type="submit" wire:loading.attr="disabled">
+                    <span class="sr-only">Send</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover:mr-0 mr-2 w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                </button>
+            </div>
         </form>
     </div>
 </div>
