@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="md:w-2/3 md:p-8">
-        <h1 class="hidden md:block text-3xl font-bold mb-4">{!! $video->title !!}</h1>
+        <h1 class="hidden md:block text-3xl text-gray-200 font-bold mb-4">{!! $video->title !!}</h1>
         <div class="video-container">
             {!! str_replace(['width="480"', 'height="270"'], '', $video->embed_html) !!}
         </div>

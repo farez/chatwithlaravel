@@ -14,7 +14,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased flex flex-col h-full bg-indigo-50 max-h-screen" x-data="{ open: false }">
+<body class="font-sans antialiased flex flex-col h-full bg-slate-900 max-h-screen" x-data="{ open: false }">
 <nav class="bg-slate-800 h-[50px]">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-[50px] items-center justify-between">
