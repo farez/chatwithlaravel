@@ -45,7 +45,7 @@
     </div>
 </nav>
 
-<main id="main" class="bg-red-600 flex-1 flex flex-col md:flex-row relative" style="min-height: calc(100vh - 50px)">
+<main id="main" class="max-w-7xl mx-auto flex-1 flex flex-col md:flex-row relative" style="min-height: calc(100vh - 50px)">
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden z-50 bg-slate-800" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
@@ -54,11 +54,11 @@
         </div>
     </div>
     <div class="md:w-2/3 p-8">
-        <h1 class="text-4xl font-bold mb-4">Left Column</h1>
+        <h1 class="text-xl font-bold mb-4">Left Column</h1>
         <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum, eros nec euismod tristique, justo lorem luctus turpis, sit amet suscipit nunc turpis sit amet sapien.</p>
     </div>
-    <div class="md:w-1/3 bg-red-50 p-8 overflow-y-scroll">
-        <h2 class="text-2xl font-bold mb-4">Right Column</h2>
+    <div class="md:w-1/3 bg-red-50 p-8 overflow-y-scroll scroll-smooth">
+        <h2 class="text-xl font-bold mb-4">Right Column</h2>
         <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio ac tortor euismod consectetur. Duis eu neque eu turpis pellentesque dictum id sit amet quam.</p>
         <p class="text-lg text-gray-800">Integer id elit eu lectus pellentesque sagittis. Nulla facilisi. Nam eleifend vestibulum diam vel gravida. Phasellus ultrices, felis ac elementum consectetur, lorem orci commodo libero, a varius justo nulla eu mi.</p>
         <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo ac turpis interdum euismod. Nullam sed justo vel justo feugiat eleifend.</p>
@@ -67,9 +67,6 @@
         <p class="text-lg text-gray-800">Sed dapibus erat a mauris dictum venenatis. Nullam consectetur, eros eget auctor accumsan, risus odio auctor nunc.</p>
         <p class="text-lg text-gray-800">Ut aliquam augue ac ante gravida, a pulvinar odio volutpat. Maecenas non sem fermentum, aliquet justo id, tincidunt odio.</p>
         <p class="text-lg text-gray-800">Suspendisse ut elit sed neque rutrum feugiat ut a diam. Pellentesque eu ex at quam iaculis fermentum eu eu justo.</p>
-{{--        <p class="text-lg text-gray-800">Sed in erat efficitur, congue ipsum vel, posuere elit. Nulla euismod felis nec lacinia luctus.</p>--}}
-{{--        <p class="text-lg text-gray-800">Proin non libero tristique, malesuada magna ut, ultrices tortor. Fusce id metus et urna elementum iaculis.</p>--}}
-{{--        <p class="text-lg text-gray-800">Quisque et ligula in metus efficitur sollicitudin nec eu mauris. Curabitur vel diam sed purus consectetur gravida.</p>--}}
     </div>
 </main>
 
