@@ -54,20 +54,22 @@
         </div>
     </div>
 
-    <div class="md:w-2/3 p-8">
-        <h1 class="text-xl font-bold mb-4">Left Column</h1>
-        <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum, eros nec euismod tristique, justo lorem luctus turpis, sit amet suscipit nunc turpis sit amet sapien.</p>
-    </div>
-    <div class="md:w-1/3 bg-red-50 p-8 overflow-y-scroll scroll-smooth">
-        <h2 class="text-xl font-bold mb-4">Right Column</h2>
-        <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio ac tortor euismod consectetur. Duis eu neque eu turpis pellentesque dictum id sit amet quam.</p>
-        <p class="text-lg text-gray-800">Integer id elit eu lectus pellentesque sagittis. Nulla facilisi. Nam eleifend vestibulum diam vel gravida. Phasellus ultrices, felis ac elementum consectetur, lorem orci commodo libero, a varius justo nulla eu mi.</p>
-        <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo ac turpis interdum euismod. Nullam sed justo vel justo feugiat eleifend.</p>
-        <p class="text-lg text-gray-800">Nam sit amet massa ac nibh faucibus auctor. Nullam interdum sapien a luctus cursus. Proin posuere, elit eu posuere rutrum, tellus dui pellentesque metus.</p>
-        <p class="text-lg text-gray-800">Vestibulum a aliquam elit. Fusce eleifend nisi eget magna bibendum eleifend. Sed efficitur quam vitae ipsum lobortis facilisis.</p>
-        <p class="text-lg text-gray-800">Sed dapibus erat a mauris dictum venenatis. Nullam consectetur, eros eget auctor accumsan, risus odio auctor nunc.</p>
-        <p class="text-lg text-gray-800">Ut aliquam augue ac ante gravida, a pulvinar odio volutpat. Maecenas non sem fermentum, aliquet justo id, tincidunt odio.</p>
-        <p class="text-lg text-gray-800">Suspendisse ut elit sed neque rutrum feugiat ut a diam. Pellentesque eu ex at quam iaculis fermentum eu eu justo.</p>
+    <div class="flex flex-col md:flex-row flex-1" style="min-height: calc(100vh - 50px)">
+        <div class="md:w-2/3 p-8">
+            <h1 class="text-xl font-bold mb-4">Left Column</h1>
+            <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum, eros nec euismod tristique, justo lorem luctus turpis, sit amet suscipit nunc turpis sit amet sapien.</p>
+        </div>
+        <div class="md:w-1/3 bg-red-50 p-8 overflow-y-scroll scroll-smooth">
+            <h2 class="text-xl font-bold mb-4">Right Column</h2>
+            <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio ac tortor euismod consectetur. Duis eu neque eu turpis pellentesque dictum id sit amet quam.</p>
+            <p class="text-lg text-gray-800">Integer id elit eu lectus pellentesque sagittis. Nulla facilisi. Nam eleifend vestibulum diam vel gravida. Phasellus ultrices, felis ac elementum consectetur, lorem orci commodo libero, a varius justo nulla eu mi.</p>
+            <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo ac turpis interdum euismod. Nullam sed justo vel justo feugiat eleifend.</p>
+            <p class="text-lg text-gray-800">Nam sit amet massa ac nibh faucibus auctor. Nullam interdum sapien a luctus cursus. Proin posuere, elit eu posuere rutrum, tellus dui pellentesque metus.</p>
+            <p class="text-lg text-gray-800">Vestibulum a aliquam elit. Fusce eleifend nisi eget magna bibendum eleifend. Sed efficitur quam vitae ipsum lobortis facilisis.</p>
+            <p class="text-lg text-gray-800">Sed dapibus erat a mauris dictum venenatis. Nullam consectetur, eros eget auctor accumsan, risus odio auctor nunc.</p>
+            <p class="text-lg text-gray-800">Ut aliquam augue ac ante gravida, a pulvinar odio volutpat. Maecenas non sem fermentum, aliquet justo id, tincidunt odio.</p>
+            <p class="text-lg text-gray-800">Suspendisse ut elit sed neque rutrum feugiat ut a diam. Pellentesque eu ex at quam iaculis fermentum eu eu justo.</p>
+        </div>
     </div>
 </main>
 
