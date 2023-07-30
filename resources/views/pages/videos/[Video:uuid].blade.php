@@ -23,7 +23,12 @@
                 </div>
                 <div class="flex flex-col">
                     <label for="api-key">Your OpenAI API key</label>
-                    <input id="api-key" type="text">
+                    <div class="flex flex-col">
+                        <input class="flex-1" id="api-key" type="text">
+{{--                        <button class="p-2 mt-1 bg-gray-200 hover:bg-gray-500 hover:text-white rounded">(Optional) Save to this browser</button>--}}
+                    </div>
+{{--                    <div class="text-sm mt-2">Your API key is transmitted to our web server and then to OpenAI's API directly. We do not store your API key on the web server. You may optionally save the key to this browser to re-use it for other videos.</div>--}}
+                    <div class="text-sm mt-2">Your API key is transmitted to our web server and then to OpenAI's API directly. We do not store your API key on the web server.</div>
                 </div>
             </div>
         </div>
