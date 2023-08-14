@@ -1,20 +1,11 @@
-<?php
-
-use \App\Models\Event;
-use function Livewire\Volt\computed;
-
-$event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
-
-?>
-
 <x-app-layout>
 
     <div class="md:p-8 bg-slate-900">
-        <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">Laracon US. Nashville, TN, USA.</h1>
+        <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0">{{ $event->title }}</h1>
+        <div class="text-white">{{ $event->location }}</div>
 
-        @volt
-        <ul class="padding-0">
-            @foreach($this->event->videos as $video)
+        <ul class="padding-0 mt-4 md:mt-16">
+            @foreach($event->videos as $video)
 
                 <li>
                     <a href="/videos/{{ $video->uuid }}" class="group">
@@ -37,7 +28,6 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
 
             @endforeach
         </ul>
-        @endvolt
     </div>
 
 </x-app-layout>
