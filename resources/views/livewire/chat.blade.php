@@ -1,4 +1,4 @@
-<div class="flex flex-col md:flex-row flex-1 relative" style="min-height: calc(100vh - 50px)">
+<div x-on:question-answered="scroll()" class="flex flex-col md:flex-row flex-1 relative" style="min-height: calc(100vh - 50px)">
     <div class="md:w-1/2 md:p-8 z-50">
         <h1 class="hidden md:block text-gray-200 font-bold mb-4">{!! $video->title !!}</h1>
         <div class="video-container">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="transcript md:w-1/2 bg-red-50 px-2 pt-2 pb-16 overflow-y-scroll scroll-smooth">
+    <div id="transcript" class="transcript md:w-1/2 bg-red-50 px-2 pt-2 pb-16 overflow-y-scroll scroll-smooth">
         <div class="md:px-4 m-4 py-2 text-sm border-b-2">
             <p>Ask a question in the chat box below to get started! Just like you would with ChatGPT.</p>
             <p>Examples:</p>
@@ -46,7 +46,7 @@
         </div>
         @if($qas)
             @foreach($qas as $qa)
-                <div class="m-4 py-2 text-sm">
+                <div id="qa-{{ $loop->index + 1 }}" class="m-4 py-2 text-sm">
                     <div class="question font-medium md:px-4">
                         {{ $qa['question'] }}
                     </div>
@@ -55,19 +55,9 @@
                     </div>
                 </div>
             @endforeach
-{{--        @else--}}
-{{--            <div class="m-4 py-2 text-sm">--}}
-{{--                <p>Ask a question in the chat box below to get started!</p>--}}
-{{--                <p>Just like you would with ChatGPT. Examples:</p>--}}
-{{--                <ul>--}}
-{{--                    <li>What is this talk about?</li>--}}
-{{--                    <li>List the main topics.</li>--}}
-{{--                    <li>What are some use cases mentioned?</li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
         @endif
     </div>
-    <div x-on:question-answered="alert('hello')">
+    <div>
         <form wire:submit.prevent="ask" class="md:w-1/2 w-full flex flex-col absolute bottom-0 right-0 p-2 mx-0 bg-white shadow-lg">
             <label class="sr-only" for="question">Ask a question</label>
             @error('question') <div class="text-red-500">{{ $message }}</div> @enderror
@@ -82,4 +72,12 @@
             </div>
         </form>
     </div>
+    <script>
+        function scroll() {
+            setTimeout(() => {
+                document.getElementById('transcript').scrollTo(0, document.getElementById('transcript').scrollHeight);
+                hljs.highlightAll();
+            }, 500);
+        }
+    </script>
 </div>

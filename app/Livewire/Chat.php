@@ -66,6 +66,8 @@ class Chat extends Component
         ];
 
         $this->reset('question');
+
+        $this->dispatch('question-answered', id: count($this->qas));
     }
 
     public function getAnswerFromAI($message): string
