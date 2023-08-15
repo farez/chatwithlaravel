@@ -24,4 +24,9 @@ class Video extends Model
     {
         return $this->hasMany(Caption::class);
     }
+
+    public function qas()
+    {
+        return $this->hasMany(QA::class);
+    }
 }
