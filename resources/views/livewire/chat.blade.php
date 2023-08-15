@@ -63,11 +63,19 @@
             @error('question') <div class="text-red-500">{{ $message }}</div> @enderror
             <div class="w-full flex">
                 <input wire:model="question" maxlength="500" name="question" class="flex-1 mr-2 border-0" id="question" type="text" placeholder="Type a question or instruction." />
-                <button type="submit" wire:loading.attr="disabled">
+                <button class="m-2" type="submit" wire:loading.attr="disabled">
+                    <span class="sr-only">Sending</span>
+                    <span wire:loading.block wire:target="ask">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-spin w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
+                    </span>
                     <span class="sr-only">Send</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover:mr-0 mr-2 w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                    </svg>
+                    <span wire:loading.remove wire:target="ask">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                        </svg>
+                    </span>
                 </button>
             </div>
         </form>

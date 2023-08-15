@@ -9,7 +9,7 @@ class ChatLLM
     public static array $lastResponseData = [];
 
     public static int $maxTokens = 16388; // 16k
-    public static int $maxCompletionTokens = 100;
+    public static int $maxCompletionTokens = 256;
 
     public static function ask($question, $matches)
     {
