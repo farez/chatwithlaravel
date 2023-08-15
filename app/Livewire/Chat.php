@@ -21,7 +21,11 @@ class Chat extends Component
     public function mount(Video $video)
     {
         $this->video = $video;
-        $this->qas = $video->qas()->oldest()->get()->toArray();
+        $this->qas = $video->qas()
+            ->whereUuid(UserSession::getSessionUuid())
+            ->oldest()
+            ->get()
+            ->toArray();
     }
 
     public function render()

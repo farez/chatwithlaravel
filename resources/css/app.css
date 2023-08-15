@@ -3,8 +3,39 @@
 @tailwind utilities;
 
 @layer components {
-    pre {
-        @apply bg-black p-4 text-white rounded-lg;
+    .transcript code {
+        @apply my-4 p-4 rounded-lg;
+    }
+
+    .transcript table {
+        @apply my-4 divide-y divide-gray-300 border border-2 border-gray-300 overflow-hidden;
+    }
+    .transcript thead {
+        @apply bg-gray-50;
+    }
+
+    .transcript thead th {
+        @apply px-3 py-3.5 text-left text-sm font-semibold text-gray-900;
+    }
+
+    .transcript tbody {
+        @apply divide-y divide-gray-200 bg-white;
+    }
+
+    .transcript tbody td {
+        @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500;
+    }
+
+    .transcript ul {
+        @apply list-disc my-4;
+    }
+
+    .transcript ol {
+        @apply list-decimal my-4;
+    }
+
+    .transcript p {
+        @apply my-4;
     }
 
     .video-container {

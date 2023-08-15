@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <!-- Styles for highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+
     <title>{{ config('app.name', 'Laravel TLDR') }}</title>
 
     <!-- Scripts -->
@@ -59,6 +62,10 @@
     </div>
     {{ $slot }}
 </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 </body>
 </html>
