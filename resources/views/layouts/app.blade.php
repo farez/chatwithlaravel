@@ -61,7 +61,7 @@
     </div>
 </nav>
 
-<main id="main" class="max-w-7xl md:w-3/4 w-full mx-auto relative" style="min-height: calc(100vh - 50px)">
+<main id="main" class="max-w-7xl md:w-3/4 w-full mx-auto relative flex-1 flex flex-col md:flex-row " style="min-height: calc(100vh - 50px)">
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden z-50 bg-slate-800" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
@@ -71,11 +71,11 @@
             <a href="https://github.com/farez/chatwithlaravel/" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Code</a>
         </div>
     </div>
-    @if(isset($page_title))
-        <div class="max-w-7xl mt-4">
-            <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">{{ $page_title }}</h1>
-        </div>
-    @endif
+{{--    @if(isset($page_title))--}}
+{{--        <div class="max-w-7xl mt-4">--}}
+{{--            <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">{{ $page_title }}</h1>--}}
+{{--        </div>--}}
+{{--    @endif--}}
     {{ $slot }}
 </main>
 
