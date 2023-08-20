@@ -10,7 +10,11 @@ Chat with Laravel is a demo site. It is an example of how you can build a basic 
 
 Right now, a lot in this project is hard-coded. It's not meant to be production-ready but more of a starting point for you to build your own chatbot.
 
-## Source code
+## Tech
+
+Chat with Laravel is built with [Laravel 10](https://laravel.com/), [Laravel Livewire 3](https://laravel-livewire.com/), [Folio](https://github.com/laravel/folio), [Volt](https://livewire.laravel.com/docs/volt), [AlpineJS](https://alpinejs.dev/), and [TailwindCSS](https://tailwindcss.com/).
+
+The AI is powered by [OpenAI's GPT-3](https://openai.com/blog/openai-api/). This uses the GPT-3.5 16k model.
 
 All code for this website is open source, on [GitHub](https://github.com/farez/chatwithlaravel).
 
