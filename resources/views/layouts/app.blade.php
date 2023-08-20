@@ -12,6 +12,9 @@
     <!-- Styles for highlight.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="OENHCIOV" defer></script>
+    
     <title>{{ config('app.name', 'Laravel TLDR') }}</title>
 
     <!-- Scripts -->
