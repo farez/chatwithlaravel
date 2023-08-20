@@ -17,3 +17,9 @@ Thank you for considering contributing this app!
 ## License
 
 This code is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Hire me 
+
+I built this demo application, and I am also the founder of [ClarifyPDF](https://clarifypdf.com), a professional chatbot for interacting with PDF documents. If you would like help building your own chatbot, I am available for hire. Email me at farez@redkeydigital.com.
+
+If you're interested in training or learning how to build a chatbot, please also do get in touch.
