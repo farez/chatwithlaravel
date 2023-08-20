@@ -18,14 +18,14 @@
     <!-- Crisp -->
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="60f7d71c-8a8a-434d-aad5-1cd0f2bd8f9c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
-    <title>{{ config('app.name', 'Laravel TLDR') }}</title>
+    <title>{{ config('app.name', 'Laravel TL;DR') }} | {{ $meta_title ?? 'Chat with Laravel videos' }}</title>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased flex flex-col h-full md:bg-slate-900 bg-red-50 max-h-screen" x-data="{ open: false }">
+<body class="font-sans antialiased flex flex-col h-full bg-slate-900 max-h-screen" x-data="{ open: false }">
 <nav class="bg-slate-800 h-[50px]">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-[50px] items-center justify-between">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center bg-gray-300 rounded px-2 border-2 border-red-700">
@@ -59,7 +59,13 @@
     </div>
 </nav>
 
-<main id="main" class="max-w-7xl md:w-3/4 w-full mx-auto flex-1 flex flex-col md:flex-row relative" style="min-height: calc(100vh - 50px)">
+<main id="main" class="max-w-7xl md:w-3/4 w-full mx-auto relative" style="min-height: calc(100vh - 50px)">
+    @if(isset($page_title))
+        <div class="max-w-7xl mt-4">
+            <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">{{ $page_title }}</h1>
+        </div>
+
+    @endif
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden z-50 bg-slate-800" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
