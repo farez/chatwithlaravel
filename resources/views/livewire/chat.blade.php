@@ -36,15 +36,18 @@
     </div>
     <div id="transcript" class="transcript md:w-1/2 bg-red-50 px-2 pt-2 pb-16 overflow-y-scroll scroll-smooth">
         <div class="md:px-4 m-4 py-2 text-sm border-b-2">
+            @if(empty($apiKey))
+                <div class="bg-red-800 text-white rounded p-4">Please enter your API key in the chat settings.</div>
+            @endif
             <p>Ask a question in the chat box below to get started! Just like you would with ChatGPT.</p>
             <p>Examples questions you can ask:</p>
-            <ul class="list-inside">
+            <ul class="list-outside ml-4">
                 <li>What is this talk about?</li>
                 <li>List the main topics.</li>
                 <li>What are some use cases mentioned?</li>
             </ul>
             <p>Limitations:</p>
-            <ul class="list-inside">
+            <ul class="list-outside ml-4">
                 <li><a href="https://platform.openai.com/docs/guides/safety-best-practices/understand-and-communicate-limitations" target="_blank" class="underline">Answers may not be correct</a>, so always double check it.</li>
                 <li>Your questions and answers are not saved and will only be remembered for 2 hours.</li>
             </ul>

@@ -14,6 +14,10 @@ Right now, a lot in this project is hard-coded. It's not meant to be production-
 
 All code for this website is open source, on [GitHub](https://github.com/farez/chatwithlaravel).
 
+## Roadmap
+
+View the Project board on GitHub for the [roadmap](https://github.com/users/farez/projects/1).
+
 ## Installation 
 
 (Content coming soon)

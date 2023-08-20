@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
         "livewire/volt": "^1.0@beta",
-        "openai-php/client": "^0.6.4"
+        "openai-php/client": "^0.6.4",
+        "spatie/laravel-markdown": "^2.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
