@@ -27,7 +27,7 @@
     }
 
     .transcript ul {
-        @apply list-disc my-4;
+        @apply list-disc;
     }
 
     .transcript ol {

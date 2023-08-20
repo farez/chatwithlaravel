@@ -15,6 +15,9 @@
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="OENHCIOV" defer></script>
 
+    <!-- Crisp -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="60f7d71c-8a8a-434d-aad5-1cd0f2bd8f9c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
     <title>{{ config('app.name', 'Laravel TLDR') }}</title>
 
     <!-- Scripts -->
@@ -25,8 +28,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-[50px] items-center justify-between">
             <div class="flex items-center">
-                <div class="flex-shrink-0 flex items-center bg-gray-300 rounded px-2">
-{{--                    <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">--}}
+                <div class="flex-shrink-0 flex items-center bg-gray-300 rounded px-2 border-2 border-red-700">
                     <img class="h-8 w-8" src="/images/logo.svg" alt="{{ config('app.name') }}">
                     <div class="font-medium ml-2">{{ config('app.name') }}</div>
                 </div>
