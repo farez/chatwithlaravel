@@ -14,7 +14,7 @@ $event = computed(fn () => Event::where('slug', 'laracon-2023')->first());
     <x-slot name="page_title">Laracon US. Nashville, TN, USA.</x-slot>
 
     <div class="bg-slate-900">
-{{--        <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">Laracon US. Nashville, TN, USA.</h1>--}}
+        <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">Laracon US. Nashville, TN, USA.</h1>
 
         @volt
         <ul class="padding-0">

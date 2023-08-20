@@ -2,7 +2,9 @@
     <x-slot name="meta_title">Custom chatbot for PHP</x-slot>
     <x-slot name="page_title">About</x-slot>
 
-<div class="markdown bg-white p-4 rounded-lg">
+    <div>
+        <h1 class="text-3xl text-gray-200 font-bold mt-4 md:mt-0 mb-4 md:mb-16 mx-2">About</h1>
+        <div class="markdown bg-white p-4 rounded-lg">
 <x-markdown>
 Chat with Laravel is a demo site. It is an example of how you can build a basic AI chatbot for interacting with your own content. In the case of this website, we're using Laracon video transcripts as the content that you can interact with.
 
@@ -31,6 +33,8 @@ If you have any questions Chat with Laravel, feel free to reach out to me:
 [Email](mailto:farez@redkeydigital.com) | [Twitter](https://twitter.com/farez) | [Blog](https://farez.me) | [LinkedIn](https://www.linkedin.com/in/farez/)
 
 </x-markdown>
-</div>
+        </div>
+    </div>
+
 
 </x-app-layout>
