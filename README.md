@@ -4,6 +4,10 @@
     <a href="https://chatwithlaravel.com" target="_blank"><img src="https://chatwithlaravel.com/images/logo.svg" width="100" alt="Chat with Laravel Logo"></a>
 </div>
 
+## Demo
+
+https://chatwithlaravel.com
+
 ## About
 
 Chat with Laravel is a demo site. It is an example of how you can build a basic AI chatbot for interacting with your own content. In the case of this website, we're using Laracon video transcripts as the content that you can interact with.
